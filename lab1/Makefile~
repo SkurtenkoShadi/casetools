@@ -1,0 +1,26 @@
+CC=gcc
+FLAGS = -Wall -Werror -Wextra
+NAME_APP=app
+OBJECT_DIR=Objective
+SOURCE_DIR=Source
+
+$(NAME_APP): main.o
+	$(CC) -o $@ $<
+
+main.o: main.c
+	$(CC) $(FLAGS) -c $<
+
+objective dir:
+	mkdir $(OBJECT_DIR)
+	mv *.o $(OBJECT_DIR)
+
+source dir:
+	mkdir $(SOURCE_DIR)
+	mv *.c $(SOURCE_DIR)
+
+indent:
+	indent -kr -nut -i4 *.c
+
+clean:
+	rm  app
+	rmdir $(OBJECT_DIR)

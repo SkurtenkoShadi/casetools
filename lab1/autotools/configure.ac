@@ -1,0 +1,15 @@
+AC_INIT([game],[0.0.1])
+
+AM_INIT_AUTOMAKE([-Wall])
+
+AC_PREREQ([2.69])
+
+AC_CHECK_HEADER_STDBOOL
+
+AC_PROG_CXX
+
+AC_LANG(C++)
+
+AC_CONFIG_FILES([Makefile source/Makefile])
+
+AC_OUTPUT
